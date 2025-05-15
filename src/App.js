@@ -1,13 +1,12 @@
 import "./App.css";
+import Heading from "./components/heading";
+import List from "./components/list";
 
 function App() {
-  const name = "Jothi";
-  const year = new Date().getFullYear();
-
   return (
     <div>
-      <h2>Created by {name}</h2>
-      <p>Copyright {year}</p>
+      <Heading />
+      <List />
     </div>
   );
 }
