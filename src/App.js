@@ -2,11 +2,12 @@ import "./App.css";
 
 function App() {
   const name = "Jothi";
-  const randomNumber = Math.floor(Math.random() * 10); // 0-9
+  const year = new Date().getFullYear();
+
   return (
     <div>
-      <h1>Hello {name}</h1>
-      <p>Your luck number is {randomNumber}</p>
+      <h2>Created by {name}</h2>
+      <p>Copyright {year}</p>
     </div>
   );
 }
