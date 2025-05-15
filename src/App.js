@@ -1,12 +1,14 @@
 import "./App.css";
-import Heading from "./components/heading";
-import List from "./components/list";
+// import Heading from "./components/heading";
+// import List from "./components/list";
 
 function App() {
+  const name = "Jothi";
   return (
     <div>
-      <Heading />
-      <List />
+      <h1>Hello {name}</h1>
+      {/* <Heading />
+      <List /> */}
     </div>
   );
 }
