@@ -1,17 +1,14 @@
 import React from "react";
 
 function Heading() {
+  const customStyle = {
+    color: "orange",
+    fontSize: "30px",
+    border: "1px dashed black",
+  };
   return (
     <>
-      <h1
-        style={{
-          color: "blue",
-          textShadow: "2px 2px 3px navy",
-          border: "1px solid black",
-        }}
-      >
-        My Favourite Foods
-      </h1>
+      <h1 style={customStyle}>My Favourite Foods</h1>
     </>
   );
 }
