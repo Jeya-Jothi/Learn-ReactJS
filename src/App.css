@@ -1,3 +1,10 @@
 .title {
   color: red;
 }
+
+img {
+  width: 150px;
+  height: 150px;
+  margin-right: 10px;
+  object-fit: cover;
+}
