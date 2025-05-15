@@ -1,9 +1,12 @@
 import "./App.css";
+import Heading from "./components/heading";
+import List from "./components/list";
 
 function App() {
   return (
     <div>
-      <h1>Welcome Jothi</h1>
+      <Heading />
+      <List />
     </div>
   );
 }
