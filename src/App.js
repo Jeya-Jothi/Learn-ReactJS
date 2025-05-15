@@ -1,14 +1,12 @@
 import "./App.css";
-// import Heading from "./components/heading";
-// import List from "./components/list";
 
 function App() {
   const name = "Jothi";
+  const randomNumber = Math.floor(Math.random() * 10); // 0-9
   return (
     <div>
       <h1>Hello {name}</h1>
-      {/* <Heading />
-      <List /> */}
+      <p>Your luck number is {randomNumber}</p>
     </div>
   );
 }
