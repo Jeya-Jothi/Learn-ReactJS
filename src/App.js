@@ -1,13 +1,10 @@
 import "./App.css";
-import Heading from "./components/heading";
-import List from "./components/list";
+import Greetingtime from "./components/greetingTime";
 
 function App() {
   return (
     <>
-      {/* CUSTOM COMPONENTS */}
-      <Heading />
-      <List />
+      <Greetingtime />
     </>
   );
 }
