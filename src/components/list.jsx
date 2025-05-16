@@ -1,14 +1,13 @@
 import React from "react";
-import * as pi from "./math";
-
+import { add, subtract, multiply, divide } from "./calculator";
 function List() {
-  console.log(pi);
   return (
     <>
       <ul>
-        <li>{pi.default}</li>
-        <li>{pi.doublePi()}</li>
-        <li>{pi.triplePi()}</li>
+        <li>{add(1, 2)}</li>
+        <li>{subtract(8, 5)}</li>
+        <li>{multiply(5, 5)}</li>
+        <li>{divide(10, 2)}</li>
       </ul>
     </>
   );
