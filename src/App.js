@@ -1,10 +1,10 @@
 import "./App.css";
-import Greetingtime from "./components/greetingTime";
-
+import List from "./components/list";
+import pi, { doublePi, triplePi } from "./components/math";
 function App() {
   return (
     <>
-      <Greetingtime />
+      <List />
     </>
   );
 }
