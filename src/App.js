@@ -1,9 +1,14 @@
 import "./App.css";
-import List from "./components/list";
+import Heading from "./components/heading";
+import Note from "./components/note";
+import Footer from "./components/footer";
+
 function App() {
   return (
     <>
-      <List />
+      <Heading />
+      <Note />
+      <Footer />
     </>
   );
 }

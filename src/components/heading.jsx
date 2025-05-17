@@ -3,7 +3,9 @@ import React from "react";
 function Heading() {
   return (
     <>
-      <h1>My Favourite Foods</h1>
+      <header>
+        <h1>Keeper</h1>
+      </header>
     </>
   );
 }
