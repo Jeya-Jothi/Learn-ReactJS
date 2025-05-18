@@ -7,7 +7,10 @@ function App() {
   return (
     <>
       <Heading />
-      <Note />
+      <Note
+        title="Welcome to keeper"
+        content="This is the keeper app, where you can write your thoughts and save it"
+      />
       <Footer />
     </>
   );
