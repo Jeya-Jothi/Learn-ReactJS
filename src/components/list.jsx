@@ -1,5 +1,5 @@
 import React from "react";
-import { add, subtract, multiply, divide } from "./calculator";
+import { add, subtract, multiply, divide } from ".utils/calculator.js";
 function List() {
   return (
     <>

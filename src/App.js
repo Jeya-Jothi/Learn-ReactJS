@@ -1,30 +1,33 @@
 import "./App.css";
 import Contactcart from "./components/contactCard";
+import contacts from "./utils/contacts.js"
 
 function App() {
+  console.log(contacts);
+  
   return (
     <div>
       <h1 className="heading">My Contacts</h1>
 
       <Contactcart
-        name="Beyonce"
-        img="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg"
-        phone="+123 456 789"
-        mail="b@beyonce.com"
+        name={contacts[0].name}
+        img={contacts[0].imgURL}
+        phone={contacts[0].phone} 
+        mail={contacts[0].email}
       />
 
       <Contactcart
-        name="Jack Bauer"
-        img="https://pbs.twimg.com/profile_images/625247595825246208/X3XLea04_400x400.jpg"
-        phone="+987 654 321"
-        mail="jack@nowhere.com"
+        name={contacts[1].name}
+        img={contacts[1].imgURL}
+        phone={contacts[1].phone}
+        mail={contacts[1].email}
       />
 
       <Contactcart
-        name="Chuck Norris"
-        img="https://i.pinimg.com/originals/e3/94/47/e39447de921955826b1e498ccf9a39af.png"
-        phone="+918 372 574"
-        mail="gmail@chucknorris.com"
+        name={contacts[2].name}
+        img={contacts[2].imgURL}
+        phone={contacts[2].phone}
+        mail={contacts[2].email}
       />
     </div>
   );
