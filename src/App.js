@@ -4,7 +4,7 @@ import Contactcart from "./components/contactCard";
 function App() {
   return (
     <div>
-      <h1>My Contacts</h1>
+      <h1 className="heading">My Contacts</h1>
 
       <Contactcart
         name="Beyonce"
