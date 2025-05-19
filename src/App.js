@@ -1,7 +1,6 @@
 import "./App.css";
 import Contactcart from "./components/contactCard";
 import contacts from "./utils/contacts.js"
-
 function App() {
   console.log(contacts);
   
