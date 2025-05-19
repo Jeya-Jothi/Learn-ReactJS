@@ -5,7 +5,7 @@ import contacts from "./utils/contacts.js";
 function createCard(contact) {
   return (
     <Contactcart
-      key={contact.id}
+      key={contact.id} //important
       name={contact.name}
       img={contact.imgURL}
       phone={contact.phone}
