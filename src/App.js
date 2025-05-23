@@ -1,18 +1,19 @@
 import "./App.css";
-import emojipedia from "./utils/emojipedia";
 
-function Meaninglist(props) {
-  return <li>{props.meaning.slice(0, 100)}</li>;
-}
+let isLoggedIn = true;
 
 function App() {
   return (
-    <div>
-      <ul>
-        {emojipedia.map((n) => {
-          return <Meaninglist meaning={n.meaning} key={n.id} />;
-        })}
-      </ul>
+    <div className="container">
+      {isLoggedIn ? (
+        <h1>Hello</h1>
+      ) : (
+        <form className="form">
+          <input type="text" placeholder="Username" />
+          <input type="password" placeholder="Password" />
+          <button type="submit">Login</button>
+        </form>
+      )}
     </div>
   );
 }
