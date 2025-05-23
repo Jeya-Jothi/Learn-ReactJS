@@ -1,13 +1,12 @@
 import "./App.css";
-import Login from "./components/Login";
-let isLoggedIn = false;
+// let isLoggedIn = false;
 
-const currentHour = new Date().getHours();
+const currentHour = new Date().getHours(); // 4 PM
 
 function App() {
   return (
     <div className="container">
-      {currentHour > 12 ? <h1>Why are you still working?</h1> : null}
+      {currentHour > 12 && <h1>Why are you still working?</h1>}
     </div>
   );
 }
