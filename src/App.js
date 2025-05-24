@@ -1,19 +1,28 @@
 import { useState } from "react";
 import "./App.css";
 
+//Challenge:
+//1. Given that you can get the current time using:
+let time = new Date().toLocaleTimeString();
+console.log(time);
+//Show the latest time in the <h1> when the Get Time button
+//is pressed.
+
+//2. Given that you can get code to be called every second
+//using the setInterval method.
+//Can you get the time in your <h1> to update every second?
+
+//e.g. uncomment the code below to see Hey printed every second.
+// function sayHi() {
+//   console.log("Hey");
+// }
+// setInterval(sayHi, 1000);
+
 function App() {
-  const [count, setCount] = useState(0);
-  function increase() {
-    setCount(count + 1);
-  }
-  function decrease() {
-    setCount(count - 1);
-  }
-  return (
+  retur(
     <div>
-      <h1>{count}</h1>
-      <button onClick={increase}>+</button>
-      <button onClick={decrease}>-</button>
+      <h1>TIME</h1>
+      <button>Get Time</button>
     </div>
   );
 }
