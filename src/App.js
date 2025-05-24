@@ -1,18 +1,21 @@
+import { useState } from "react";
 import "./App.css";
-import emojipedia from "./utils/emojipedia";
-
-function Meaninglist(props) {
-  return <li>{props.meaning.slice(0, 100)}</li>;
-}
 
 function App() {
+  const [count, setCount] = useState(0);
+
+  function increaseCount() {
+    setCount(count + 1);
+  }
+  function decreseCount() {
+    setCount(count - 1);
+  }
+
   return (
     <div>
-      <ul>
-        {emojipedia.map((n) => {
-          return <Meaninglist meaning={n.meaning} key={n.id} />;
-        })}
-      </ul>
+      <h1>{count}</h1>
+      <button onClick={increaseCount}>⇧ Increase</button>
+      <button onClick={decreseCount}>⇩ Decrese</button>
     </div>
   );
 }
