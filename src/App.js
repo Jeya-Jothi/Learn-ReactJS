@@ -2,20 +2,16 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  // function increaseCount() {
-  //   setCount(count + 1);
-  // }
-  // function decreseCount() {
-  //   setCount(count - 1);
-  // }
+  const [status, setStatus] = useState("NotBuyed");
+  function task() {
+    setStatus("Buyed");
+  }
+  const strikeThrough = { textDecoration: "line-through" };
 
   return (
     <div>
-      <h1>{count}</h1>
-      <button onClick={() => setCount(count + 1)}>⇧ Increase</button>
-      <button onClick={() => setCount(count - 1)}>⇩ Decrese</button>
+      <h1 style={status === "Buyed" ? strikeThrough : null}>Buy milk</h1>
+      <button onClick={task}>StrikeThrough</button>
     </div>
   );
 }
