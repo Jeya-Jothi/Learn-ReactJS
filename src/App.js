@@ -5,6 +5,11 @@ function App() {
   const [cat, dog] = animals;
   console.log(cat); // {name: 'cat', sound: 'meow'}
   console.log(dog);
+
+  // Destructuring Object
+
+  const { name, sound } = cat;
+  console.log(name); //cat
   return (
     <div>
       <h1>Hello {cat.name}</h1>
