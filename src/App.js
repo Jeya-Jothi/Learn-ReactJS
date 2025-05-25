@@ -6,11 +6,11 @@ function App() {
   console.log(cat); // {name: 'cat', sound: 'meow'}
   console.log(dog);
 
-  //Default name
+  // Change variable name
 
-  const { name = "Fluffy", sound = "Puff" } = cat;
-  console.log(name); // Fluffy
-  console.log(sound); // meow
+  const { name: dogName, sound: dogSound } = dog;
+  console.log(dogName); //Dog
+  console.log(dogSound); //woof
 
   return (
     <div>
