@@ -3,8 +3,7 @@ import "./App.css";
 
 //Challenge:
 //1. Given that you can get the current time using:
-let time = new Date().toLocaleTimeString();
-console.log(time);
+// console.log(time);
 //Show the latest time in the <h1> when the Get Time button
 //is pressed.
 
@@ -17,12 +16,17 @@ console.log(time);
 //   console.log("Hey");
 // }
 // setInterval(sayHi, 1000);
+let time = new Date().toLocaleTimeString();
 
 function App() {
-  retur(
+  const [currentTime, setTime] = useState(time);
+  function getTime() {
+    setTime(new Date().toLocaleTimeString());
+  }
+  return (
     <div>
-      <h1>TIME</h1>
-      <button>Get Time</button>
+      <h1>{currentTime}</h1>
+      <button onClick={getTime}>Get Time</button>
     </div>
   );
 }
