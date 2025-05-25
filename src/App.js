@@ -1,21 +1,14 @@
-import { useState } from "react";
 import "./App.css";
-
-let time = new Date().toLocaleTimeString();
+import animals from "./utils/animals";
 
 function App() {
-  const [currentTime, setTime] = useState(time);
-  function getTime() {
-    setTime(new Date().toLocaleTimeString());
-  }
-  let intervalId;
-  clearInterval(intervalId);
-  intervalId = setInterval(() => {
-    getTime();
-  }, 1000);
+  const [cat, dog] = animals;
+  console.log(cat); // {name: 'cat', sound: 'meow'}
+  console.log(dog);
   return (
     <div>
-      <h1>{currentTime}</h1>
+      <h1>Hello {cat.name}</h1>
+      <h2>{cat.sound}</h2>
     </div>
   );
 }
