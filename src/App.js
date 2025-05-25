@@ -6,10 +6,12 @@ function App() {
   console.log(cat); // {name: 'cat', sound: 'meow'}
   console.log(dog);
 
-  // Destructuring Object
+  //Default name
 
-  const { name, sound } = cat;
-  console.log(name); //cat
+  const { name = "Fluffy", sound = "Puff" } = cat;
+  console.log(name); // Fluffy
+  console.log(sound); // meow
+
   return (
     <div>
       <h1>Hello {cat.name}</h1>

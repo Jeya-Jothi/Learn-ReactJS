@@ -1,6 +1,5 @@
 const animals = [
   {
-    name: "cat",
     sound: "meow",
   },
   {
