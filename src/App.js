@@ -1,22 +1,46 @@
 import "./App.css";
-import animals from "./utils/animals";
-
+import cars from "./utils/cars";
 function App() {
-  const [cat, dog] = animals;
-  console.log(cat); // {name: 'cat', sound: 'meow'}
-  console.log(dog);
+  const [honda, tesla] = cars;
 
-  // Change variable name
+  const {
+    speedStats: { topSpeed: hondaTopSpeed },
+  } = honda;
+  const {
+    speedStats: { topSpeed: teslaTopSpeed },
+  } = tesla;
+  const {
+    coloursByPopularity: [hondaTopColour],
+  } = honda;
 
-  const { name: dogName, sound: dogSound } = dog;
-  console.log(dogName); //Dog
-  console.log(dogSound); //woof
+  const {
+    coloursByPopularity: [teslaTopColour],
+  } = tesla;
 
   return (
-    <div>
-      <h1>Hello {cat.name}</h1>
-      <h2>{cat.sound}</h2>
-    </div>
+    <>
+      <table>
+        <thead>
+          <tr>
+            <th>Brand</th>
+            <th>Top Speed</th>
+            <th>Top Colors</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{honda.model}</td>
+            <td>{hondaTopSpeed}</td>
+            <td>{hondaTopColour}</td>
+          </tr>
+          <tr>
+            <td>{tesla.model}</td>
+            <td>{teslaTopSpeed}</td>
+            <td>{teslaTopColour}</td>
+          </tr>
+        </tbody>
+      </table>
+    </>
   );
 }
 
