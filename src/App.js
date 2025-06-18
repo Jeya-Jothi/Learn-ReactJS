@@ -1,18 +1,20 @@
+import { useState } from "react";
 import "./App.css";
-import emojipedia from "./utils/emojipedia";
-
-function Meaninglist(props) {
-  return <li>{props.meaning.slice(0, 100)}</li>;
-}
 
 function App() {
+  const [isMouseOver, setMouseOver] = useState(false);
+
   return (
-    <div>
-      <ul>
-        {emojipedia.map((n) => {
-          return <Meaninglist meaning={n.meaning} key={n.id} />;
-        })}
-      </ul>
+    <div className="container">
+      <h1>Hello </h1>
+      <input type="text" placeholder="What's your name?" />
+      <button
+        style={{ backgroundColor: isMouseOver ? "black" : "white" }}
+        onMouseOver={() => setMouseOver(true)}
+        onMouseOut={() => setMouseOver(false)}
+      >
+        Submit
+      </button>
     </div>
   );
 }
