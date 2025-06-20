@@ -8,21 +8,20 @@ function App() {
   });
 
   function handleChange(e) {
-    const newValue = e.target.value;
-    const inputName = e.target.name;
-    console.log(newValue);
-    console.log(inputName);
+    const { value, name } = e.target;
+    console.log(value);
+    console.log(name);
 
     setFullName((prevValue) => {
-      if (inputName === "fName") {
+      if (name === "fName") {
         return {
-          fname: newValue,
+          fname: value,
           lname: prevValue.lname,
         };
-      } else if (inputName === "lName") {
+      } else if (name === "lName") {
         return {
           fname: prevValue.fname,
-          lname: newValue,
+          lname: value,
         };
       }
     });
