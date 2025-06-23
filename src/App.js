@@ -1,17 +1,18 @@
 import "./App.css";
 
 function App() {
-  const citrus = ["Lime", "lemon", "Orange"];
-  const fruits = ["Apple", "Banana", "Coconut"];
+  const fullName = {
+    fName: "Jeya",
+    lName: "Jothi",
+  };
 
-  console.log(citrus);
-  console.log(fruits);
+  const user = {
+    ...fullName,
+    age: 21,
+    address: "Tenkasi",
+  };
 
-  const newFruits = ["Apple", "Banana", "Coconut", ...citrus];
-  console.log(newFruits);
-
-  const inMiddle = ["Apple", ...citrus, "Banana", "Coconut"];
-  console.log(inMiddle);
+  console.log(user);
 
   return <div></div>;
 }
