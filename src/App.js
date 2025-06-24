@@ -3,8 +3,8 @@ import "./App.css";
 
 function App() {
   useEffect(() => {
-    console.log("Hello from useEffect");
-  }); // It runs every time the component updates (re-renders).
+    console.log("Runs only once when component mounts");
+  }, []); // mounts- Component appears on the screen for the first time.
   return (
     <div>
       <h1>useEffect()</h1>
